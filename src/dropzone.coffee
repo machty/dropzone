@@ -1181,12 +1181,9 @@ class Dropzone extends Emitter
 
     # Some browsers do not have the .upload property
     progressObj = xhr.upload ? xhr
-    progressObj.onprogress = updateProgress
+    #progressObj.onprogress = updateProgress
 
-    headers =
-      "Accept": "application/json",
-      "Cache-Control": "no-cache",
-      "X-Requested-With": "XMLHttpRequest",
+    headers ={}
 
     extend headers, @options.headers if @options.headers
 
